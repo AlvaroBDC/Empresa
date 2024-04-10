@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Empresa
 {
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -30,6 +31,20 @@ namespace Empresa
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+        }
+    }
+    public class empresaEmpleado
+    {
+        public void insertarEmpleado(Empleados eEmpleados)
+        {
+            using (var bd = new EmpresaEntities())
+            {
+                bd.Empleados.Add(eEmpleados);
+            }
         }
     }
 }
